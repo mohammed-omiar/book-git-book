@@ -1,0 +1,478 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="main-container">
+    <div class="xs-pd-20-10 pd-ltr-20">
+        <div class="title pb-20">
+            <h2 class="h3 mb-0">Hospital Overview</h2>
+        </div>
+
+        <div class="row pb-10">
+            <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
+                <div class="card-box height-100-p widget-style3">
+                    <div class="d-flex flex-wrap">
+                        <div class="widget-data">
+                            <div class="weight-700 font-24 text-dark">{{allbooks}}</div>
+                            <div class="font-14 text-secondary weight-500">
+                                Appointment
+                            </div>
+                        </div>
+                        <div class="widget-icon">
+                            <div class="icon" data-color="#00eccf">
+                                <i class="icon-copy dw dw-calendar1"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
+                <div class="card-box height-100-p widget-style3">
+                    <div class="d-flex flex-wrap">
+                        <div class="widget-data">
+                            <div class="weight-700 font-24 text-dark">124,551</div>
+                            <div class="font-14 text-secondary weight-500">
+                                Total Patient
+                            </div>
+                        </div>
+                        <div class="widget-icon">
+                            <div class="icon" data-color="#ff5b5b">
+                                <span class="icon-copy ti-heart"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
+                <div class="card-box height-100-p widget-style3">
+                    <div class="d-flex flex-wrap">
+                        <div class="widget-data">
+                            <div class="weight-700 font-24 text-dark">400+</div>
+                            <div class="font-14 text-secondary weight-500">
+                                Total Doctor
+                            </div>
+                        </div>
+                        <div class="widget-icon">
+                            <div class="icon">
+                                <i
+                                    class="icon-copy fa fa-stethoscope"
+                                    aria-hidden="true"
+                                ></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
+                <div class="card-box height-100-p widget-style3">
+                    <div class="d-flex flex-wrap">
+                        <div class="widget-data">
+                            <div class="weight-700 font-24 text-dark">$50,000</div>
+                            <div class="font-14 text-secondary weight-500">Earning</div>
+                        </div>
+                        <div class="widget-icon">
+                            <div class="icon" data-color="#09cc06">
+                                <i class="icon-copy fa fa-money" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row pb-10">
+            <div class="col-md-8 mb-20">
+                <div class="card-box height-100-p pd-20">
+                    <div
+                        class="d-flex flex-wrap justify-content-between align-items-center pb-0 pb-md-3"
+                    >
+                        <div class="h5 mb-md-0">Hospital Activities</div>
+                        
+                        <div class="form-group mb-md-0">
+                            
+                            <select class="form-control form-control-sm selectpicker">
+                                <option value="">Last Week</option>
+                                <option value="">Last Month</option>
+                                <option value="">Last 6 Month</option>
+                                <option value="">Last 1 year</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="chart8" style="min-height: 358.012px;">
+                        <div id="apexcharts14d979" class="apexcharts-canvas apexcharts14d979 apexcharts-theme-light" style="width: 468px; height: 358.012px;">
+                        <svg id="SvgjsSvg3186" width="468" height="358.0125" xmlns="http://www.w3.org/2000/svg"
+                         version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                          class="apexcharts-svg" xmlns:data="ApexChartsNS" transform="translate(0, 0)" style="background: transparent;">
+                          <foreignObject x="0" y="0" width="468" height="358.0125">
+                              <div class="apexcharts-legend apexcharts-align-center position-right"
+                               xmlns="http://www.w3.org/1999/xhtml" style="position: absolute; left: auto; top: 20px; right: 5px;">
+                               <div class="apexcharts-legend-series" rel="1" data:collapsed="false" style="margin: 0px 5px;">
+                                   <span class="apexcharts-legend-marker" rel="1" data:collapsed="false" 
+                                   style="background: rgb(0, 143, 251); color: rgb(0, 143, 251); 
+                                   height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;">
+                                </span>
+                                <span class="apexcharts-legend-text" rel="1" i="0" data:default-text="series-1"
+                                 data:collapsed="false" style="color: rgb(55, 61, 63);
+                                  font-size: 12px; font-weight: 400; font-family: Helvetica, Arial, sans-serif;">الكتب الموباعة</span>
+                                </div>
+                                <div class="apexcharts-legend-series" rel="2" data:collapsed="false" style="margin: 0px 5px;">
+                                    <span class="apexcharts-legend-marker" rel="2" data:collapsed="false" 
+                                    style="background: rgb(0, 227, 150); color: rgb(0, 227, 150); height: 12px; width: 12px; left: 0px; top: 0px;
+                                     border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;">
+
+                                    </span>
+                                    <span class="apexcharts-legend-text" rel="2" i="1" data:default-text="series-2" 
+                                    data:collapsed="false" style="color: rgb(55, 61, 63); font-size: 12px;
+                                     font-weight: 400; font-family: Helvetica, Arial, sans-serif;">الكتب المستاجرة</span>
+                                    </div>
+                                    <div class="apexcharts-legend-series" rel="3" data:collapsed="false" style="margin: 0px 5px;">
+                                        <span class="apexcharts-legend-marker" rel="3" data:collapsed="false" style="background: rgb(254, 176, 25);
+                                         color: rgb(254, 176, 25); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></span>
+                                        <span class="apexcharts-legend-text" rel="3" i="2" data:default-text="series-3" data:collapsed="false" 
+                                        style="color: rgb(55, 61, 63); font-size: 12px; font-weight: 400; font-family: Helvetica, Arial, sans-serif;">الكتب المتاحة</span>
+                                    </div><div class="apexcharts-legend-series" rel="4" data:collapsed="false" style="margin: 0px 5px;">
+                                        <span class="apexcharts-legend-marker" rel="4" data:collapsed="false" style="background: rgb(255, 69, 96);
+                                         color: rgb(255, 69, 96); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; 
+                                         border-color: rgb(255, 255, 255); border-radius: 12px;"></span>
+                                         <span class="apexcharts-legend-text" rel="4" i="3" data:default-text="series-4" data:collapsed="false" 
+                                         style="color: rgb(55, 61, 63); font-size: 12px; font-weight: 400; font-family: Helvetica, Arial, sans-serif;">series-4</span>
+                                        </div><div class="apexcharts-legend-series" rel="5" data:collapsed="false" style="margin: 0px 5px;"><span class="apexcharts-legend-marker" rel="5" data:collapsed="false" style="background: rgb(119, 93, 208); color: rgb(119, 93, 208); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></span><span class="apexcharts-legend-text" rel="5" i="4" data:default-text="series-5" data:collapsed="false" style="color: rgb(55, 61, 63); font-size: 12px; font-weight: 400; font-family: Helvetica, Arial, sans-serif;">series-5</span></div></div><style type="text/css">	
+    	
+      .apexcharts-legend {	
+        display: flex;	
+        overflow: auto;	
+        padding: 0 10px;	
+      }	
+      .apexcharts-legend.position-bottom, .apexcharts-legend.position-top {	
+        flex-wrap: wrap	
+      }	
+      .apexcharts-legend.position-right, .apexcharts-legend.position-left {	
+        flex-direction: column;	
+        bottom: 0;	
+      }	
+      .apexcharts-legend.position-bottom.apexcharts-align-left, .apexcharts-legend.position-top.apexcharts-align-left, .apexcharts-legend.position-right, .apexcharts-legend.position-left {	
+        justify-content: flex-start;	
+      }	
+      .apexcharts-legend.position-bottom.apexcharts-align-center, .apexcharts-legend.position-top.apexcharts-align-center {	
+        justify-content: center;  	
+      }	
+      .apexcharts-legend.position-bottom.apexcharts-align-right, .apexcharts-legend.position-top.apexcharts-align-right {	
+        justify-content: flex-end;	
+      }	
+      .apexcharts-legend-series {	
+        cursor: pointer;	
+        line-height: normal;	
+      }	
+      .apexcharts-legend.position-bottom .apexcharts-legend-series, .apexcharts-legend.position-top .apexcharts-legend-series{	
+        display: flex;	
+        align-items: center;	
+      }	
+      .apexcharts-legend-text {	
+        position: relative;	
+        font-size: 14px;	
+      }	
+      .apexcharts-legend-text *, .apexcharts-legend-marker * {	
+        pointer-events: none;	
+      }	
+      .apexcharts-legend-marker {	
+        position: relative;	
+        display: inline-block;	
+        cursor: pointer;	
+        margin-right: 3px;	
+        border-style: solid;
+      }	
+      	
+      .apexcharts-legend.apexcharts-align-right .apexcharts-legend-series, .apexcharts-legend.apexcharts-align-left .apexcharts-legend-series{	
+        display: inline-block;	
+      }	
+      .apexcharts-legend-series.apexcharts-no-click {	
+        cursor: auto;	
+      }	
+      .apexcharts-legend .apexcharts-hidden-zero-series, .apexcharts-legend .apexcharts-hidden-null-series {	
+        display: none !important;	
+      }	
+      .apexcharts-inactive-legend {	
+        opacity: 0.45;	
+      }
+    </style>
+</foreignObject>
+<g id="SvgjsG3188" class="apexcharts-inner apexcharts-graphical" transform="translate(22, 0)">
+    <defs id="SvgjsDefs3187">
+        <clipPath id="gridRectMask14d979">
+            <rect id="SvgjsRect3189" width="339.3125" height="357.3125" x="-3" y="-1" rx="0" ry="0" fill="#ffffff" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0">
+
+            </rect>
+        </clipPath>
+        <clipPath id="gridRectMarkerMask14d979">
+            <rect id="SvgjsRect3190" width="335.3125" height="357.3125" x="-1" y="-1" rx="0" ry="0" fill="#ffffff" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0">
+
+            </rect>
+        </clipPath>
+        <filter id="SvgjsFilter3199" filterUnits="userSpaceOnUse" width="200%" height="200%" x="-50%" y="-50%">
+            <feFlood id="SvgjsFeFlood3200" flood-color="#000000" flood-opacity="0.45" result="SvgjsFeFlood3200Out" in="SourceGraphic">
+
+            </feFlood>
+            <feComposite id="SvgjsFeComposite3201" in="SvgjsFeFlood3200Out" in2="SourceAlpha" operator="in" result="SvgjsFeComposite3201Out">
+
+            </feComposite><feOffset id="SvgjsFeOffset3202" dx="1" dy="1" result="SvgjsFeOffset3202Out" in="SvgjsFeComposite3201Out">
+
+            </feOffset>
+            <feGaussianBlur id="SvgjsFeGaussianBlur3203" stdDeviation="1 " result="SvgjsFeGaussianBlur3203Out" in="SvgjsFeOffset3202Out">
+
+            </feGaussianBlur><feMerge id="SvgjsFeMerge3204" result="SvgjsFeMerge3204Out" in="SourceGraphic">
+                <feMergeNode id="SvgjsFeMergeNode3205" in="SvgjsFeGaussianBlur3203Out">
+
+                </feMergeNode><feMergeNode id="SvgjsFeMergeNode3206" in="[object Arguments]">
+
+                </feMergeNode>
+            </feMerge>
+            <feBlend id="SvgjsFeBlend3207" in="SourceGraphic" in2="SvgjsFeMerge3204Out" mode="normal" result="SvgjsFeBlend3207Out">
+
+            </feBlend>
+        </filter>
+        <filter id="SvgjsFilter3211" filterUnits="userSpaceOnUse" width="200%" height="200%" x="-50%" y="-50%">
+            <feFlood id="SvgjsFeFlood3212" flood-color="#000000" flood-opacity="0.45" result="SvgjsFeFlood3212Out" in="SourceGraphic">
+
+            </feFlood><feComposite id="SvgjsFeComposite3213" in="SvgjsFeFlood3212Out" in2="SourceAlpha" operator="in" result="SvgjsFeComposite3213Out">
+
+            </feComposite><feOffset id="SvgjsFeOffset3214" dx="1" dy="1" result="SvgjsFeOffset3214Out" in="SvgjsFeComposite3213Out">
+
+            </feOffset><feGaussianBlur id="SvgjsFeGaussianBlur3215" stdDeviation="1 " result="SvgjsFeGaussianBlur3215Out" in="SvgjsFeOffset3214Out"></feGaussianBlur><feMerge id="SvgjsFeMerge3216" result="SvgjsFeMerge3216Out" in="SourceGraphic"><feMergeNode id="SvgjsFeMergeNode3217" in="SvgjsFeGaussianBlur3215Out"></feMergeNode><feMergeNode id="SvgjsFeMergeNode3218" in="[object Arguments]"></feMergeNode></feMerge><feBlend id="SvgjsFeBlend3219" in="SourceGraphic" in2="SvgjsFeMerge3216Out" mode="normal" result="SvgjsFeBlend3219Out"></feBlend></filter><filter id="SvgjsFilter3223" filterUnits="userSpaceOnUse" width="200%" height="200%" x="-50%" y="-50%"><feFlood id="SvgjsFeFlood3224" flood-color="#000000" flood-opacity="0.45" result="SvgjsFeFlood3224Out" in="SourceGraphic"></feFlood><feComposite id="SvgjsFeComposite3225" in="SvgjsFeFlood3224Out" in2="SourceAlpha" operator="in" result="SvgjsFeComposite3225Out"></feComposite><feOffset id="SvgjsFeOffset3226" dx="1" dy="1" result="SvgjsFeOffset3226Out" in="SvgjsFeComposite3225Out"></feOffset><feGaussianBlur id="SvgjsFeGaussianBlur3227" stdDeviation="1 " result="SvgjsFeGaussianBlur3227Out" in="SvgjsFeOffset3226Out"></feGaussianBlur><feMerge id="SvgjsFeMerge3228" result="SvgjsFeMerge3228Out" in="SourceGraphic"><feMergeNode id="SvgjsFeMergeNode3229" in="SvgjsFeGaussianBlur3227Out"></feMergeNode><feMergeNode id="SvgjsFeMergeNode3230" in="[object Arguments]"></feMergeNode></feMerge><feBlend id="SvgjsFeBlend3231" in="SourceGraphic" in2="SvgjsFeMerge3228Out" mode="normal" result="SvgjsFeBlend3231Out"></feBlend></filter><filter id="SvgjsFilter3235" filterUnits="userSpaceOnUse" width="200%" height="200%" x="-50%" y="-50%"><feFlood id="SvgjsFeFlood3236" flood-color="#000000" flood-opacity="0.45" result="SvgjsFeFlood3236Out" in="SourceGraphic"></feFlood><feComposite id="SvgjsFeComposite3237" in="SvgjsFeFlood3236Out" in2="SourceAlpha" operator="in" result="SvgjsFeComposite3237Out"></feComposite><feOffset id="SvgjsFeOffset3238" dx="1" dy="1" result="SvgjsFeOffset3238Out" in="SvgjsFeComposite3237Out"></feOffset><feGaussianBlur id="SvgjsFeGaussianBlur3239" stdDeviation="1 " result="SvgjsFeGaussianBlur3239Out" in="SvgjsFeOffset3238Out"></feGaussianBlur><feMerge id="SvgjsFeMerge3240" result="SvgjsFeMerge3240Out" in="SourceGraphic"><feMergeNode id="SvgjsFeMergeNode3241" in="SvgjsFeGaussianBlur3239Out"></feMergeNode><feMergeNode id="SvgjsFeMergeNode3242" in="[object Arguments]"></feMergeNode></feMerge><feBlend id="SvgjsFeBlend3243" in="SourceGraphic" in2="SvgjsFeMerge3240Out" mode="normal" result="SvgjsFeBlend3243Out"></feBlend></filter><filter id="SvgjsFilter3247" filterUnits="userSpaceOnUse" width="200%" height="200%" x="-50%" y="-50%"><feFlood id="SvgjsFeFlood3248" flood-color="#000000" flood-opacity="0.45" result="SvgjsFeFlood3248Out" in="SourceGraphic"></feFlood><feComposite id="SvgjsFeComposite3249" in="SvgjsFeFlood3248Out" in2="SourceAlpha" operator="in" result="SvgjsFeComposite3249Out"></feComposite><feOffset id="SvgjsFeOffset3250" dx="1" dy="1" result="SvgjsFeOffset3250Out" in="SvgjsFeComposite3249Out"></feOffset><feGaussianBlur id="SvgjsFeGaussianBlur3251" stdDeviation="1 " result="SvgjsFeGaussianBlur3251Out" in="SvgjsFeOffset3250Out"></feGaussianBlur><feMerge id="SvgjsFeMerge3252" result="SvgjsFeMerge3252Out" in="SourceGraphic"><feMergeNode id="SvgjsFeMergeNode3253" in="SvgjsFeGaussianBlur3251Out"></feMergeNode><feMergeNode id="SvgjsFeMergeNode3254" in="[object Arguments]"></feMergeNode></feMerge><feBlend id="SvgjsFeBlend3255" in="SourceGraphic" in2="SvgjsFeMerge3252Out" mode="normal" result="SvgjsFeBlend3255Out"></feBlend></filter></defs><g id="SvgjsG3192" class="apexcharts-pie"><g id="SvgjsG3193" transform="translate(0, 0) scale(1)"><circle id="SvgjsCircle3194" r="108.76006097560978" cx="166.65625" cy="177.65625" fill="transparent"></circle><g id="SvgjsG3195" class="apexcharts-slices"><g id="SvgjsG3196" class="apexcharts-series apexcharts-pie-series" seriesName="seriesx1" rel="1" data:realIndex="0"><path id="SvgjsPath3197" d="M 166.65625 10.333079268292664 A 167.32317073170734 167.32317073170734 0 0 1 333.86779080565697 183.76723069954397 L 275.34375152367704 181.62838745470359 A 108.76006097560978 108.76006097560978 0 0 0 166.65625 68.89618902439022 L 166.65625 10.333079268292664 z" fill="rgba(0,143,251,1)" fill-opacity="1" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-pie-area apexcharts-donut-slice-0" index="0" j="0" data:angle="92.09302325581395" data:startAngle="0" data:strokeWidth="2" data:value="44" data:pathOrig="M 166.65625 10.333079268292664 A 167.32317073170734 167.32317073170734 0 0 1 333.86779080565697 183.76723069954397 L 275.34375152367704 181.62838745470359 A 108.76006097560978 108.76006097560978 0 0 0 166.65625 68.89618902439022 L 166.65625 10.333079268292664 z" stroke="#ffffff"></path></g><g id="SvgjsG3208" class="apexcharts-series apexcharts-pie-series" seriesName="seriesx2" rel="2" data:realIndex="1"><path id="SvgjsPath3209" d="M 333.86779080565697 183.76723069954397 A 167.32317073170734 167.32317073170734 0 0 1 90.14901467193545 326.4637982163732 L 116.92654703675804 274.3811563406426 A 108.76006097560978 108.76006097560978 0 0 0 275.34375152367704 181.62838745470359 L 333.86779080565697 183.76723069954397 z" fill="rgba(0,227,150,1)" fill-opacity="1" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-pie-area apexcharts-donut-slice-1" index="0" j="1" data:angle="115.11627906976746" data:startAngle="92.09302325581395" data:strokeWidth="2" data:value="55" data:pathOrig="M 333.86779080565697 183.76723069954397 A 167.32317073170734 167.32317073170734 0 0 1 90.14901467193545 326.4637982163732 L 116.92654703675804 274.3811563406426 A 108.76006097560978 108.76006097560978 0 0 0 275.34375152367704 181.62838745470359 L 333.86779080565697 183.76723069954397 z" stroke="#ffffff"></path></g><g id="SvgjsG3220" class="apexcharts-series apexcharts-pie-series" seriesName="seriesx3" rel="3" data:realIndex="2"><path id="SvgjsPath3221" d="M 90.14901467193545 326.4637982163732 A 167.32317073170734 167.32317073170734 0 0 1 12.661008394382264 112.21536807944895 L 66.55934295634847 135.1196767516418 A 108.76006097560978 108.76006097560978 0 0 0 116.92654703675804 274.3811563406426 L 90.14901467193545 326.4637982163732 z" fill="rgba(254,176,25,1)" fill-opacity="1" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-pie-area apexcharts-donut-slice-2" index="0" j="2" data:angle="85.81395348837208" data:startAngle="207.2093023255814" data:strokeWidth="2" data:value="41" data:pathOrig="M 90.14901467193545 326.4637982163732 A 167.32317073170734 167.32317073170734 0 0 1 12.661008394382264 112.21536807944895 L 66.55934295634847 135.1196767516418 A 108.76006097560978 108.76006097560978 0 0 0 116.92654703675804 274.3811563406426 L 90.14901467193545 326.4637982163732 z" stroke="#ffffff"></path></g><g id="SvgjsG3232" class="apexcharts-series apexcharts-pie-series" seriesName="seriesx4" rel="4" data:realIndex="3"><path id="SvgjsPath3233" d="M 12.661008394382264 112.21536807944895 A 167.32317073170734 167.32317073170734 0 0 1 79.4908604675042 34.83034782759867 L 109.99874680387774 84.81941358793914 A 108.76006097560978 108.76006097560978 0 0 0 66.55934295634847 135.1196767516418 L 12.661008394382264 112.21536807944895 z" fill="rgba(255,69,96,1)" fill-opacity="1" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-pie-area apexcharts-donut-slice-3" index="0" j="3" data:angle="35.58139534883719" data:startAngle="293.0232558139535" data:strokeWidth="2" data:value="17" data:pathOrig="M 12.661008394382264 112.21536807944895 A 167.32317073170734 167.32317073170734 0 0 1 79.4908604675042 34.83034782759867 L 109.99874680387774 84.81941358793914 A 108.76006097560978 108.76006097560978 0 0 0 66.55934295634847 135.1196767516418 L 12.661008394382264 112.21536807944895 z" stroke="#ffffff"></path></g><g id="SvgjsG3244" class="apexcharts-series apexcharts-pie-series" seriesName="seriesx5" rel="5" data:realIndex="4"><path id="SvgjsPath3245" d="M 79.4908604675042 34.83034782759867 A 167.32317073170734 167.32317073170734 0 0 1 166.6270465977068 10.333081816770289 L 166.6372677885094 68.89619068090067 A 108.76006097560978 108.76006097560978 0 0 0 109.99874680387774 84.81941358793914 L 79.4908604675042 34.83034782759867 z" fill="rgba(119,93,208,1)" fill-opacity="1" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-pie-area apexcharts-donut-slice-4" index="0" j="4" data:angle="31.395348837209326" data:startAngle="328.6046511627907" data:strokeWidth="2" data:value="15" data:pathOrig="M 79.4908604675042 34.83034782759867 A 167.32317073170734 167.32317073170734 0 0 1 166.6270465977068 10.333081816770289 L 166.6372677885094 68.89619068090067 A 108.76006097560978 108.76006097560978 0 0 0 109.99874680387774 84.81941358793914 L 79.4908604675042 34.83034782759867 z" stroke="#ffffff"></path></g><text id="SvgjsText3198" font-family="Helvetica, Arial, sans-serif" x="266.0328887762156" y="81.84512656941605" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="600" fill="#ffffff" class="apexcharts-text apexcharts-pie-label" filter="url(#SvgjsFilter3199)" 
+            style="font-family: Helvetica, Arial, sans-serif;">{{booksold}}%</text>
+            <text id="SvgjsText3210" font-family="Helvetica, Arial, sans-serif" x="236.40362244046963" 
+            y="296.7813596332736" text-anchor="middle" dominant-baseline="auto" font-size="12px" 
+            font-weight="600" fill="#ffffff" class="apexcharts-text apexcharts-pie-label" 
+            filter="url(#SvgjsFilter3211)" style="font-family: Helvetica, Arial, sans-serif;">
+          {{bookrental}}%%
+  
+            </text><text id="SvgjsText3222" font-family="Helvetica, Arial, sans-serif" x="36.844012843914726" y="224.60591232063132" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="600" fill="#ffffff" class="apexcharts-text apexcharts-pie-label" filter="url(#SvgjsFilter3223)" style="font-family: Helvetica, Arial, sans-serif;">
+                {{bookncailble}}%</text><text id="SvgjsText3234" font-family="Helvetica, Arial, sans-serif" x="62.18139903226832" y="87.43156810663287" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="600" fill="#ffffff" class="apexcharts-text apexcharts-pie-label" filter="url(#SvgjsFilter3235)" style="font-family: Helvetica, Arial, sans-serif;">9.9%</text><text id="SvgjsText3246" font-family="Helvetica, Arial, sans-serif" x="129.30752115857695" y="44.763209695329095" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="600" fill="#ffffff" class="apexcharts-text apexcharts-pie-label" filter="url(#SvgjsFilter3247)" style="font-family: Helvetica, Arial, sans-serif;">8.7%</text></g></g>
+        </g><line id="SvgjsLine3256" x1="0" y1="0" x2="333.3125" y2="0" stroke="#b6b6b6" stroke-dasharray="0" stroke-width="1" class="apexcharts-ycrosshairs"></line><line id="SvgjsLine3257" x1="0" y1="0" x2="333.3125" y2="0" stroke-dasharray="0" stroke-width="0" class="apexcharts-ycrosshairs-hidden"></line></g></svg><div class="apexcharts-tooltip apexcharts-theme-dark"><div class="apexcharts-tooltip-series-group"><span class="apexcharts-tooltip-marker" style="background-color: rgb(0, 143, 251);"></span><div class="apexcharts-tooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-label"></span><span class="apexcharts-tooltip-text-value"></span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div><div class="apexcharts-tooltip-series-group"><span class="apexcharts-tooltip-marker" style="background-color: rgb(0, 227, 150);"></span><div class="apexcharts-tooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-label"></span><span class="apexcharts-tooltip-text-value"></span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div><div class="apexcharts-tooltip-series-group"><span class="apexcharts-tooltip-marker" style="background-color: rgb(254, 176, 25);"></span><div class="apexcharts-tooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-label"></span><span class="apexcharts-tooltip-text-value"></span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div><div class="apexcharts-tooltip-series-group"><span class="apexcharts-tooltip-marker" style="background-color: rgb(255, 69, 96);"></span><div class="apexcharts-tooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-label"></span><span class="apexcharts-tooltip-text-value"></span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div><div class="apexcharts-tooltip-series-group"><span class="apexcharts-tooltip-marker" style="background-color: rgb(119, 93, 208);"></span><div class="apexcharts-tooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-label"></span><span class="apexcharts-tooltip-text-value"></span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div></div></div></div>
+                    {% comment %} <div id="activities-chart"></div> {% endcomment %}
+                    
+                </div>
+            </div>
+            <div class="col-md-4 mb-20">
+                <div
+                    class="card-box min-height-200px pd-20 mb-20"
+                    data-bgcolor="#455a64"
+                >
+                    <div class="d-flex justify-content-between pb-20 text-white">
+                        <div class="icon h1 text-white">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            <!-- <i class="icon-copy fa fa-stethoscope" aria-hidden="true"></i> -->
+                        </div>
+                        <div class="font-14 text-right">
+                            <div><i class="icon-copy ion-arrow-up-c"></i> 2.69%</div>
+                            <div class="font-12">Since last month</div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-end">
+                        <div class="text-white">
+                            <div class="font-14">Appointment</div>
+                            <div class="font-24 weight-500">1865</div>
+                        </div>
+                        <div class="max-width-150">
+                            <div id="appointment-chart"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-box min-height-200px pd-20" data-bgcolor="#265ed7">
+                    <div class="d-flex justify-content-between pb-20 text-white">
+                        <div class="icon h1 text-white">
+                            <i class="fa fa-stethoscope" aria-hidden="true"></i>
+                        </div>
+                        <div class="font-14 text-right">
+                            <div><i class="icon-copy ion-arrow-down-c"></i> 3.69%</div>
+                            <div class="font-12">Since last month</div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-end">
+                        <div class="text-white">
+                            <div class="font-14">Surgery</div>
+                            <div class="font-24 weight-500">250</div>
+                        </div>
+                        <div class="max-width-150">
+                            <div id="surgery-chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row ">
+           
+                <div class="pd-20 card-box">
+                    <h5 class="h4 text-blue mb-20">Icons vertical Nav Pills Tab</h5>
+                    <div class="tab">
+                        <div class="row " >
+                            <div class=" col-sm-12" >
+                                <ul class="nav flex-row nav-pills vtabs" role="tablist" >
+                                    {% for cat in Category|slice:'4' %}
+                                        <li  class="nav-item cat{{cat.id}}" >
+                                            <a id="" class="nav-link" data-toggle="tab" href="#" role="tab" aria-selected="false">
+                                                <i class="fa fa-home"> </i>
+                                            
+                                            {{ cat.name }}
+                                        
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                   
+                                </ul>
+                            </div>
+                            <div class="col-md-12 col-sm-12">
+                                <div class="tab-content">
+                                    <div class="row">
+            
+                                        {% comment %} {% for book in book %} {% endcomment %}
+                                        {% for book in page_obj %}
+                                        {% comment %} <li>{{book}}</li> {% endcomment %}
+                                        
+                                            <div class="col-md-4 mb-20  bookhide book{{ book.Category.id }} book{{book.status}}">
+                                                <a href="#" class="card-box d-block mx-auto pd-20 text-secondary">
+                                                    <div class="img pb-30 bg-info">
+                                                        {% if book.photo_outher %}
+                                                        <img src="{{ book.photo_outher.url }}" class="col-md-12" style="height: 300px;" alt="" />
+                                                        {% endif %}
+                                                        
+                                                            <h3 class="h4" style="text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{book.title}}  </h3>
+                                                        
+                                                    </div>
+                                                    
+                                                    <div class="content">
+                                                        <!-- <h3 class="h4" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{book.title}}  </h3>
+                                                         -->
+                                                        <p class="max-width-200 d-flex" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; justify-content: space-between;">
+                                                            
+                                                            <span>{{book.outher}}</span>
+                                                            <span>{{book.Category}}</span>
+                                                           
+                                                        </p>
+                                                        <div class="blog-views d-flex" style="justify-content: space-between;">
+                                                            <i class="icon-copy bi bi-eye"><span>{{book.views}}</span></i> 
+                                                            <i class="icon-copy bi bi-eye"><span>{{book.created}}</span></i> 
+                                                            <!-- <i class="icon-copy bi bi-eye"><span>{{book.updated}}</span></i>  -->
+                                                        </div>
+                                                       
+                                                    </div>
+                                                    
+                                                </a>
+                                                <div class="row">
+											<div class="col-md-6 col-6">
+												<a href="{% url 'delete' book.id %}" class="btn btn-primary btn-block d-flex" 
+                                                style="justify-content: space-evenly;">حذف<i class="icon-copy bi bi-download"></i></a>
+											</div>
+											<div class="col-md-6 col-6">
+												<a href="{% url 'update' book.id %}" class="btn btn-outline-primary btn-block d-flex" 
+                                                style="justify-content: space-evenly;">تعديل <i class="icon-copy bi bi-eye"></i></a>
+											</div>
+										</div>
+                                            </div>
+                                            
+                                        {% endfor %}
+                                    </div>
+                                    <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_2_paginate">
+                                        <div class="blog-pagination mb-30">
+                                            <div class="btn-toolbar justify-content-center mb-15">
+                                                <div class="btn-group">
+                                                    <a href="?page=1" class="btn btn-outline-primary prev"
+                                                                ><i class="fa fa-angle-double-left"></i
+                                                            ></a>
+                                            <span class="step-links">
+                                                {% if page_obj.has_previous %}
+                                                    <a href="?page=1">&laquo; first</a>
+                                                    <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                                                {% endif %}
+                                    
+                                                <span class="current">
+                                                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                                                </span>
+                                    
+                                                {% if page_obj.has_next %}
+                                                    <a href="?page={{ page_obj.next_page_number }}">next</a>
+                                                    <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                                                {% endif %}
+                                            </span>
+                                            <a href="?page=2" class="btn btn-outline-primary prev">
+                                                <i class="fa fa-angle-double-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    {% comment %} <div class="tab-pane fade" id="profile7" role="tabpanel">
+                                        <div class="pd-20">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit, sed do eiusmod tempor incididunt ut labore et
+                                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                                            nostrud exercitation ullamco laboris nisi ut aliquip
+                                            ex ea commodo consequat. Duis aute irure dolor in
+                                            reprehenderit in voluptate velit esse cillum dolore
+                                            eu fugiat nulla pariatur. Excepteur sint occaecat
+                                            cupidatat non proident, sunt in culpa qui officia
+                                            deserunt mollit anim id est laborum.
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade active show" id="contact7" role="tabpanel">
+                                        <div class="pd-20">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit, sed do eiusmod tempor incididunt ut labore et
+                                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                                            nostrud exercitation ullamco laboris nisi ut aliquip
+                                            ex ea commodo consequat. Duis aute irure dolor in
+                                            reprehenderit in voluptate velit esse cillum dolore
+                                            eu fugiat nulla pariatur. Excepteur sint occaecat
+                                            cupidatat non proident, sunt in culpa qui officia
+                                            deserunt mollit anim id est laborum.
+                                        </div>
+                                    </div> {% endcomment %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+        </div>
+
+
+        
+            {% comment %} <div class="col-md-4 mb-20">
+                <a href="#" class="card-box d-block mx-auto pd-20 text-secondary">
+                    <div class="img pb-30">
+                        <img src="{% static 'vendors/images/remedy-amico.svg' %}" alt="" />
+                    </div>
+                    <div class="content">
+                        <h3 class="h4">Medications</h3>
+                        <p class="max-width-200">
+                            Look for prescription and over-the-counter drug information.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-20">
+                <a href="#" class="card-box d-block mx-auto pd-20 text-secondary">
+                    <div class="img pb-30">
+                        <img src="{% static 'vendors/images/paper-map-cuate.svg' %}" alt="" />
+                    </div>
+                    <div class="content">
+                        <h3 class="h4">Locations</h3>
+                        <p class="max-width-200">
+                            Convenient locations when and where you need them.
+                        </p>
+                    </div>
+                </a>
+            </div> {% endcomment %}
+        </div>
+    </div>
+</div>
+
+        <div class="footer-wrap pd-20 mb-20 card-box">
+            DeskApp - Bootstrap 4 Admin Template By
+            <a href="https://github.com/dropways" target="_blank"
+                >Ankit Hingarajiya</a
+            >
+        </div>
+    </div>
+</div>
+{% endblock %}

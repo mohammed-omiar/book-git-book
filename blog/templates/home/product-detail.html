@@ -1,0 +1,213 @@
+
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+		<div class="main-container">
+			<div class="pd-ltr-20 xs-pd-20-10">
+				<div class="min-height-200px">
+					<div class="page-header">
+						<div class="row">
+							<div class="col-md-12 col-sm-12">
+								<div class="title">
+									<h4>Product Detail</h4>
+								</div>
+								<nav aria-label="breadcrumb" role="navigation">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item">
+											<a href="index.html">Home</a>
+										</li>
+										<li class="breadcrumb-item active" aria-current="page">
+											Product Detail
+										</li>
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+					<div class="product-wrap">
+						<div class="product-detail-wrap mb-30">
+							<div class="row">
+								<div class="col-lg-6 col-md-12 col-sm-12">
+									<div class="product-slider slider-arrow">
+										
+										<div class="product-slide">
+											{% if books.photo_outher %}
+											<img src="{{ books.photo_book.url }}" class="col-md-12" style="height: 390px;" alt="" />
+											{% endif %}
+										</div>
+										
+										
+									</div>
+									<div class="product-slider-nav">
+										
+											<div class="product-slide-nav">
+												{% if books.photo_book %}
+													<img src="{{ books.photo_outher.url }}"  alt="" />
+												{% endif %}
+											</div>
+										
+										
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-12 col-sm-12">
+									<div class="product-detail-desc pd-20 card-box height-100-p">
+										<h4 class="mb-20 pt-20 d-flex" style="justify-content: space-between;"><span style="font-size: 12px; text-align: center; color: #e83e8c;" >{{book.Category}}</span>{{book.title}}</h4>
+										<p class="price" style="text-align: center;">وصف الكتاب</p>
+										<p>
+											{{book.description}}
+										</p>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore magna
+											aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+											ullamco laboris nisi ut aliquip ex ea commodo consequat.
+										</p>
+										
+										<div class="price" style="justify-content: space-between; text-align: center;">
+											<p>تفاصيل الكتاب</p>
+											<table class="table">
+												<thead>
+													<tr>
+														
+														<th scope="col">عدد الصفحات</th>
+														<th scope="col">الحجم</th>
+														<th scope="col">التقيم</th>
+														<th scope="col">تاريخ النشر</th>
+														<th scope="col">المشاهده</th>
+													
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														
+														<td>{{ book.pages}}</td>
+														<td>{{size|filesizeformat }}</td>
+														<td> <span val="5" class="choos-star-box ">
+															<i style="color: #00acdb;" class="fa fa-star"></i>
+															<i style="color: #00acdb;" class="fa fa-star"></i>
+															<i style="color: #00acdb;" class="fa fa-star"></i>
+															<i style="color: #00acdb;" class="fa fa-star"></i>
+															<i style="color: #00acdb;" class="fa fa-star"></i>
+															</span></td>
+														<td><span class="badge badge-primary">{{book.created}}</span></td>
+														<td>{{books.views}}</td>
+														
+													</tr>
+											
+												</tbody>
+											</table>
+											
+										</div>
+										
+										<div class="row">
+											<div class="col-md-6 col-6">
+												<a href="{{books.open_book.url}}" class="btn btn-primary btn-block d-flex" style="justify-content: space-evenly;"
+													>قراءة<i class="icon-copy bi bi-eye"></i></a>
+											</div>
+											<div class="col-md-6 col-6">
+												<a href="{{books.open_book.url}}" download="{{book.open_book.url}}" class="btn btn-outline-primary btn-block d-flex" style="justify-content: space-evenly;"
+													>تحميل <i class="icon-copy bi bi-download"></i></a>
+													
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h4 class="mb-20">Recent Product</h4>
+						<div class="product-list">
+							<ul class="row">
+								{% for book in page_obj %}
+									<a href="{% url 'product_detail' book.id %}">
+										<li class="col-lg-4 col-md-6 col-sm-12">
+											<div class="product-box">
+												
+													<div class="producct-img">
+														{% if book.photo_outher %}
+														<img src="{{ book.photo_book.url }}" class="col-md-12" style="height: 300px;" alt="" />
+														{% endif %}
+													</div>
+												
+												<div class="product-caption ">
+													<h4 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a href="#" class="" >{{book.title}}</a></h4>
+													<div class="price d-flex" style="justify-content: space-between;">
+														<del style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{book.Category}}</del>
+														<ins style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{book.title}}</ins>
+													</div>
+													
+													
+													<div class="price">
+														<div class="row d-flex" style="justify-content: space-between; ">
+															<div class="col-md-4 col-4">
+															
+																	<div class="blog-views d-flex" style=" border-radius: 5px; padding: 3px; background: rgba(23,208,83,.21);justify-content: space-evenly;">
+																		<i class="icon-copy bi bi-eye"></i> {{book.views}}
+																		
+																	</div>
+															</div>
+															<div class="col-md-6 col-6">
+																<span val="5" class="choos-star-box ">
+																	<i style="color: #00acdb;" class="fa fa-star"></i>
+																	<i style="color: #00acdb;" class="fa fa-star"></i>
+																	<i style="color: #00acdb;" class="fa fa-star"></i>
+																	<i style="color: #00acdb;" class="fa fa-star"></i>
+																	<i style="color: #00acdb;" class="fa fa-star"></i>
+																	</span>
+																	
+															</div>
+														</div>
+													</div>
+													
+												</div>
+											</div>
+										</li>
+									</a>
+								{% endfor %}
+								
+							</ul>
+						</div>
+						<div class="blog-pagination mb-30">
+							<div class="btn-toolbar justify-content-center mb-15">
+								{% comment %}  {% endcomment %}
+								<div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_2_paginate">
+									<div class="blog-pagination mb-30">
+										<div class="btn-toolbar justify-content-center mb-15">
+											<div class="btn-group">
+												<a href="?page=1" class="btn btn-outline-primary prev"
+															><i class="fa fa-angle-double-left"></i
+														></a>
+										<span class="step-links">
+											{% if page_obj.has_previous %}
+												<a href="?page=1">&laquo; first</a>
+												<a href="?page={{ page_obj.previous_page_number }}">previous</a>
+											{% endif %}
+								
+											<span class="current">
+												 {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+											</span>
+								
+											{% if page_obj.has_next %}
+												<a href="?page={{ page_obj.next_page_number }}">next</a>
+												<a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+											{% endif %}
+										</span>
+										<a href="?page=2" class="btn btn-outline-primary prev"
+															><i class="fa fa-angle-double-right"></i
+														></a>
+									</div>
+								</div>
+					</div>
+				</div>
+				<div class="footer-wrap pd-20 mb-20 card-box">
+					DeskApp - Bootstrap 4 Admin Template By
+					<a href="https://github.com/dropways" target="_blank"
+						>Ankit Hingarajiya</a
+					>
+				</div>
+			</div>
+		</div>
+		<!-- welcome modal start -->
+{% endblock %}

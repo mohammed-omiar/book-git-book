@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+		<div class="main-container">
+			<div class="pd-ltr-20 xs-pd-20-10">
+				<div class="min-height-200px">
+					<div class="page-header">
+						<div class="row">
+							<div class="col-md-12 col-sm-12">
+								<div class="title">
+									<h4>Product</h4>
+								</div>
+								<nav aria-label="breadcrumb" role="navigation">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item">
+											<a href="index.html">Home</a>
+										</li>
+										<li class="breadcrumb-item active" aria-current="page">
+											Product
+										</li>
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+					
+					<div class="card-box pd-20 height-100-p mb-30">
+						<div class="row align-items-center">
+							<div class="col-md-4">
+								<img src="{% static 'vendors/images/banner-img.png' %}" alt="">
+							</div>
+							<div class="col-md-8">
+								<h4 class="font-20 weight-500 mb-10 text-capitalize">
+									Welcome back
+									<div class="weight-600 font-30 text-blue">Johnny Brown!</div>
+								</h4>
+								<p class="font-18 max-width-600">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde
+									hic non repellendus debitis iure, doloremque assumenda. Autem
+									modi, corrupti, nobis ea iure fugiat, veniam non quaerat
+									mollitia animi error corporis.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="card-box pd-20 height-100-p mb-30">
+						<div class="row align-items-center">
+							<div class=" col-sm-12" >
+								<ul class="nav flex-row nav-pills vtabs" role="tablist" >
+									{% for cat in Category|slice:'4' %}
+										<li  class="nav-item cat{{cat.id}}" >
+											<a id="" class="nav-link" data-toggle="tab" href="#home7" role="tab" aria-selected="false">
+												<i class="fa fa-home"> </i>
+											
+											{{ cat.name }}
+										
+											</a>
+										</li>
+									{% endfor %}
+								   
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="product-wrap">
+						
+						<div class="product-list">
+							
+							<ul class="row">
+
+								
+								{% for book in page_obj %}
+								
+									<a href="{% url 'product_detail' book.id %}" >
+										<li class="col-lg-4 col-md-6 col-sm-12 bookhide book{{ book.Category.id }} book{{book.status}}">
+											<div class="product-box">
+												<div class="producct-img">
+													{% if book.photo_outher %}
+													<img src="{{ book.photo_book.url }}" class="col-md-12" style="height: 300px;" alt="" />
+													{% endif %}
+												</div>
+												<div class="product-caption ">
+													<h4 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a href="#" class="" >{{book.title}}</a></h4>
+													<div class="price d-flex" style="justify-content: space-between;">
+														<del style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{book.Category}}</del>
+														<ins style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{book.title}}</ins>
+													</div>
+													<div class="price d-flex" style="justify-content: space-between; ">
+														
+														<div class="blog-views" style=" border-radius: 5px; padding: 3px; background: rgba(23,208,83,.21);">
+                                                            <i class="icon-copy bi bi-eye"></i> {{book.views}}
+                                                            
+                                                        </div>
+														
+														<span val="5" class="choos-star-box ">
+															<i style="color: #00acdb;" class="fa fa-star"></i>
+															<i style="color: #00acdb;" class="fa fa-star"></i>
+															<i style="color: #00acdb;" class="fa fa-star"></i>
+															<i style="color: #00acdb;" class="fa fa-star"></i>
+															<i style="color: #00acdb;" class="fa fa-star"></i>
+															</span>
+													</div>
+													
+												</div>
+											</div>
+										</li>
+									</a>
+								
+								{% endfor %}
+							
+							</ul>
+						</div>
+						<div class="blog-pagination mb-30">
+							<div class="btn-toolbar justify-content-center mb-15">
+								{% comment %}  {% endcomment %}
+								<div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_2_paginate">
+									<div class="blog-pagination mb-30">
+										<div class="btn-toolbar justify-content-center mb-15">
+											<div class="btn-group">
+												<a href="?page=1" class="btn btn-outline-primary prev"
+															><i class="fa fa-angle-double-left"></i
+														></a>
+										<span class="step-links">
+											{% if page_obj.has_previous %}
+												<a href="?page=1">&laquo; first</a>
+												<a href="?page={{ page_obj.previous_page_number }}">previous</a>
+											{% endif %}
+								
+											<span class="current">
+												 {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+											</span>
+								
+											{% if page_obj.has_next %}
+												<a href="?page={{ page_obj.next_page_number }}">next</a>
+												<a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+											{% endif %}
+										</span>
+										<a href="?page=2" class="btn btn-outline-primary prev"
+															><i class="fa fa-angle-double-right"></i
+														></a>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-wrap pd-20 mb-20 card-box">
+					DeskApp - Bootstrap 4 Admin Template By
+					<a href="https://github.com/dropways" target="_blank"
+						>Ankit Hingarajiya</a
+					>
+				</div>
+			</div>
+		</div>
+		<!-- welcome modal start -->
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="main-container">
+    <div class="xs-pd-20-10 pd-ltr-20">
+        <div class="title pb-20">
+<form method="POST" action="" enctype="multipart/form-data">
+    {% csrf_token %}
+	<div class="row">
+        {{form}}
+		<div class="col-md-6 col-sm-12">
+          
+            <br>
+            <div class="form-group has-danger row">
+                <div class="col-sm-12 col-md-10">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" >اضافة</button>
+                        
+                </div>
+            </div>
+		</div>
+        
+	</div>
+
+</form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+							
